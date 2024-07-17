@@ -12,7 +12,7 @@ def train_classifier(data_dir):
             continue
         img = Image.open(image).convert("L")
         imageNp = np.array(img, 'uint8')
-        id = int(os.path.split(image)[1].split(".")[1])
+        id = int(os.path.split(image)[1].split(".")[0])
         faces.append(imageNp)
         ids.append(id)
     print(type(ids))
