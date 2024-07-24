@@ -29,10 +29,10 @@ mo3 = cv.morphologyEx(gray_img,cv.MORPH_OPEN,kernel,5)
 mo4 = cv.morphologyEx(gray_img,cv.MORPH_CLOSE,kernel,5) 
 mo5 = cv.morphologyEx(gray_img,cv.MORPH_GRADIENT,kernel,5) 
 
-co1 = cv.filter2D(gray_img,-1,kernel2)
-co2 = cv.blur(gray_img,(5,5))
-co3 = cv.medianBlur(gray_img,5)
-co4 = cv.GaussianBlur(gray_img,(5,5),10)
+co1 = cv.filter2D(mo4,-1,kernel2)
+co2 = cv.blur(mo4,(5,5))
+co3 = cv.medianBlur(mo4,5)
+co4 = cv.GaussianBlur(mo4,(5,5),10)
 
 image_processing_steps = [
     "original image",
