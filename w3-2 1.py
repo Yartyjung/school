@@ -9,7 +9,7 @@ while(True):
     cv.rectangle(frame,(0,0),(x,y),(220,140,0),20)
     cv.line(frame,(0,0),(x,y),(0,20,255),7)
     cv.putText(frame,"Live Video",(20,30),fontFace=1,fontScale=1,color=(0,0,0),thickness=2)
-
+    print(np.shape(frame))
     cv.imshow('frame', frame) 
       
 
