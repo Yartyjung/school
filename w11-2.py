@@ -9,11 +9,11 @@ while vid_capture.isOpened():
     if ret:
         motiondiff = cv.absdiff(frame1, frame2)
         graying = cv.cvtColor(motiondiff, cv.COLOR_BGR2GRAY)
-        blur = cv.GaussianBlur(graying, (5, 5), 0)
+        blur = cv.GaussianBlur(graying, (5, 5), 0) 
         thresh, result = cv.threshold(blur, 50, 255, cv.THRESH_BINARY)
         dilation = cv.dilate(result, None, iterations=3)
         contours, hierarchy = cv.findContours(dilation, cv.RETR_TREE, cv.CHAIN_APPROX_NONE)
-        cv.drawContours(frame1, contours, -1, (255, 0, 0), 2)
+        # cv.drawContours(frame1, contours, -1, (255, 0, 0), 2)
         for contour in contours:
             (x, y, w, h) = cv.boundingRect(contour)
             if cv.contourArea(contour) < 1700:

@@ -21,11 +21,7 @@ while True :
         before
     except NameError :
         before = gray_frame.copy()
-    for x in range(gray_frame.shape[0]):
-        for y in range(gray_frame.shape[1]) :
-            if abs(gray_frame[x][y]-before[x][y]) <= 30 :
-                frame[x][y] = 0
-            else :frame[x][y] = 255
+    frame = cv.absdiff(gray_frame,before)
     cv.imshow("nigga",frame)
     before = gray_frame.copy()
     if cv.waitKey(1) & 0xFF == ord('0'): 
