@@ -51,7 +51,7 @@ while 1:
         # ----------
         
         # change perspective
-        # perspective points
+        # perspective points ตรงนี้ป่ะ
         pts1 = np.float32([[560, 440],[710, 440],[200, 640],[1000, 640]])
         pts2 = np.float32([[0,0],[width,0],[0,height],[width,height]])
         # end perspective points
