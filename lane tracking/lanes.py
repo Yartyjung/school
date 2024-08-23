@@ -87,6 +87,7 @@ while True :
     # cv.imshow('lane',combo)
     # cv.imshow('canny',canny_img)
     cv.imshow('roi',roi_img)
+    cv.imread
     key = cv.waitKey(33)
     if key == ord('q'):
         break
