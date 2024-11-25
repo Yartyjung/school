@@ -148,7 +148,7 @@ X_train = data_train[1:n]
 X_train = X_train / 255.
 _,m_train = X_train.shape
  
-W1, b1, W2, b2 = gradient_descent(X_train, Y_train, 0.50, 21)
+W1, b1, W2, b2 = gradient_descent(X_train, Y_train, 0.50, 1001)
  
 test_all(W1, b1, W2, b2)
 # test_prediction(5, W1, b1, W2, b2)
